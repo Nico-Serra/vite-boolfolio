@@ -1,5 +1,6 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
+import ProjectCard from './components/ProjectCard.vue'
 import axios from 'axios'
 
 export default {
@@ -7,7 +8,7 @@ export default {
   data() {
     return {
       'projects': [],
-      'base_api_url': 'http://127.0.0.1:8000/',
+      'base_api_url': 'http://127.0.0.1:8000',
       'url': 'http://127.0.0.1:8000/api/projects',
       'loading': true
     }
@@ -21,6 +22,9 @@ export default {
       })
     }
   },
+  components: {
+    ProjectCard,
+  },
   mounted() {
     this.callApi(this.url);
 
@@ -32,7 +36,20 @@ export default {
 <template>
 
   <header>
-    header
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <h1>Portfolio</h1>
+        </div>
+
+        <div class="right_menu">
+          <a href="">Home</a>
+          <a href="">About</a>
+          <a href="">Contact</a>
+          <a href="">Info</a>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -40,19 +57,9 @@ export default {
 
       <div class="container">
         <div class="row">
-          <div class="col" v-for="project in projects.data">
-            <div class="card">
-              <template v-if="project.cover_image.startsWith('uploads')">
-                <img :src="base_api_url + '/storage/' + project.cover_image" alt="">
-              </template>
-              <template v-else>
-                <img :src="project.cover_image" alt="">
-              </template>
-              <div class="card_body">
-                <h4>{{ project.name }}</h4>
-              </div>
-            </div>
-          </div>
+        
+          <ProjectCard :project="project" :base_api_url="base_api_url" v-for="project in projects.data" />
+
         </div>
       </div>
 
