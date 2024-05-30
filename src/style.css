@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Reddit Mono";
+    background-color: darkslategrey;
+}
+
+main {
+    min-height: 100vh;
+}
+
 .container {
     width: 80%;
     margin: auto;
@@ -31,10 +40,19 @@
 }
 
 .card {
+    height: 100%;
+    
+    .card_body{
+        background-color: whitesmoke;
+        padding: 1rem 0;
+        text-align: center;
+
+    }
 
     & img {
         max-width: 100%;
         aspect-ratio: 16 / 9;
+        display: block;
     }
 }
 
@@ -57,5 +75,34 @@ header {
                 padding: 0 1rem;
             }
         }
+    }
+}
+
+.paginations {
+    margin-top: 1rem;
+
+    button {
+        padding: 1rem;
+        border-radius: 0.25rem;
+        border: 0.5px solid green;
+        background-color: seagreen;
+        margin: 0.25rem;
+
+        &:hover {
+            background-color: green;
+            cursor: pointer;
+        }
+    }
+}
+
+footer {
+    background-color: black;
+    color: whitesmoke;
+    margin-top: 1.2rem;
+    padding: 1rem 0;
+    text-align: center;
+
+    & ul {
+        list-style: none;
     }
 }

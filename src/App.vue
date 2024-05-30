@@ -20,6 +20,17 @@ export default {
         this.projects = response.data.projects
         this.loading = false
       })
+    },
+    backPage(url) {
+      this.callApi(url);
+    },
+    nextPage(url) {
+      this.callApi(url);
+    },
+    goTo(page) {
+      let url = this.url + '?page=' + page
+
+      this.callApi(url)
     }
   },
   components: {
@@ -57,9 +68,21 @@ export default {
 
       <div class="container">
         <div class="row">
-        
+
           <ProjectCard :project="project" :base_api_url="base_api_url" v-for="project in projects.data" />
 
+        </div>
+
+        <div class="paginations">
+          <button @click="backPage(projects.prev_page_url)" v-show="projects.prev_page_url != null"><i
+              class="fa fa-arrow-left" aria-hidden="true"></i></button>
+
+          <button v-for="page in projects.last_page" @click="goTo(page)">
+            {{ page }}
+          </button>
+
+          <button @click="nextPage(projects.next_page_url)" v-show="projects.next_page_url != null"><i
+              class="fa fa-arrow-right" aria-hidden="true"></i></button>
         </div>
       </div>
 
@@ -76,10 +99,42 @@ export default {
       </div>
 
     </template>
+
+
   </main>
 
   <footer>
-    footer
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h4>About</h4>
+          <ul>
+            <li>Lorem, ipsum.</li>
+            <li>Eaque, obcaecati.</li>
+            <li>Sunt, rerum!</li>
+            <li>Harum, magni?</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>About</h4>
+          <ul>
+            <li>Lorem, ipsum.</li>
+            <li>Dignissimos, magni.</li>
+            <li>Ad, cumque.</li>
+            <li>Iste, voluptatum?</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>About</h4>
+          <ul>
+            <li>Lorem, ipsum.</li>
+            <li>Fugit, hic?</li>
+            <li>Error, est.</li>
+            <li>Sapiente, quam?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </footer>
 
 </template>
