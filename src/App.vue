@@ -28,6 +28,8 @@ export default {
 
   <AppHeader />
 
+ 
+
   <router-view />
 
   <AppFooter />

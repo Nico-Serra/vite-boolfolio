@@ -1,6 +1,7 @@
 <script>
 import axios from 'axios'
 import ProjectCard from '../components/ProjectCard.vue'
+import AppBanner from '../components/AppBanner.vue'
 
 export default {
     name: 'AppProjects',
@@ -34,6 +35,7 @@ export default {
     },
     components: {
         ProjectCard,
+        AppBanner
     },
     mounted() {
         this.callApi(this.url);
@@ -45,9 +47,12 @@ export default {
 
 <template>
     <main>
+        <AppBanner titleBanner="This is the section where there are all my projects"
+            textContent="If you want to know me click ➡" routeName="about" textButton="About Me" />
         <template v-if="!loading">
 
             <div class="container">
+                <h1 class="text-center">All Projects</h1>
                 <div class="row">
 
                     <ProjectCard :project="project" :base_api_url="base_api_url" v-for="project in projects.data" />
@@ -72,10 +77,8 @@ export default {
         <template v-else>
 
             <div class="container">
-                <div class="row">
-                    <div class="col">
-                        Loading...
-                    </div>
+                <div class="text-center">
+                    Loading...
                 </div>
             </div>
 
