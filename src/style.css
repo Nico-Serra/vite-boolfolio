@@ -19,6 +19,10 @@ main {
     color: whitesmoke;
 }
 
+.py_3 {
+    padding: 1.5rem 0;
+}
+
 .container_sm {
     padding-top: 1.5rem;
     width: 40%;
@@ -52,6 +56,10 @@ main {
                 width: calc(100% / 12 * 4);
             }
 
+            a {
+                text-decoration: none;
+                color: black;
+            }
 
         }
     }
@@ -59,6 +67,8 @@ main {
 
 .card {
     height: 100%;
+
+
 
     .card_body {
         background-color: whitesmoke;
