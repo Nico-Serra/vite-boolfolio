@@ -59,4 +59,45 @@ export default {
     </main>
 </template>
 
-<style></style>
+<style>
+.sectionInput {
+    width: 60%;
+    max-width: 900px;
+    margin: auto;
+    color: whitesmoke;
+    margin-bottom: 2rem;
+
+    label {
+        display: block;
+        text-align: center;
+        font-size: small;
+    }
+
+    input {
+        width: 100%;
+        padding: 0.5rem;
+        border: 0.5px solid whitesmoke;
+        border-radius: .25rem;
+        text-align: center;
+        font-family: "Orbitron", sans-serif;
+        outline: none;
+        margin-top: 0.5rem;
+
+    }
+
+    textarea {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .btn_submit {
+        margin: 1rem 0;
+        width: 100%;
+        background-color: whitesmoke;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        border: 0.5px solid whitesmoke;
+        font-family: "Orbitron", sans-serif;
+    }
+}
+</style>

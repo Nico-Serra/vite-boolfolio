@@ -5,9 +5,19 @@ export default {
 </script>
 
 <template>
-    <div class="text-center">
-        Error 404 Not Found
-    </div>
+    <main>
+        <div class="error">
+            Error 404 Not Found
+        </div>
+    </main>
 </template>
 
-<style></style>
+<style>
+
+.error{
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+</style>

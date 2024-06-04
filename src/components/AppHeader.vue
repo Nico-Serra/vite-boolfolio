@@ -21,11 +21,18 @@ export default {
                     text: 'Contacts',
                     routeName: 'contacts'
                 },
-            ]
+            ],
+            currentPath: ''
+        }
+    },
+    methods: {
+        savePath() {
+            this.currentPath = this.$route.path;
+            console.log(this.currentPath);
         }
     },
     mounted() {
-
+        console.log(this.currentPath);
     }
 }
 
@@ -41,8 +48,17 @@ export default {
                     <h1>Portfolio</h1>
                 </div>
 
-                <div class="right_menu">
-                    <router-link :to="{ name: item.routeName }" v-for="item in menu">{{ item.text }}</router-link>
+                <div class="menu">
+                    <router-link :to="{ name: item.routeName }" v-for="item in menu">{{ item.text
+                        }}</router-link>
+                </div>
+
+                <div class="social">
+                    <a href="https://github.com/Nico-Serra?tab=repositories"><i
+                            class="fa-brands fa-square-github"></i></a>
+                    <a href="https://github.com/Nico-Serra?tab=repositories"><i class="fa-brands fa-linkedin"></i></a>
+
+
                 </div>
             </nav>
         </div>
@@ -59,19 +75,43 @@ header {
         justify-content: space-between;
         align-items: center;
 
+
         .logo {
             font-size: large;
+            text-transform: uppercase;
         }
 
-        .right_menu {
+        .menu {
 
 
             a {
                 text-decoration: none;
                 color: black;
                 padding: 0 1rem;
+                padding-bottom: 0.5rem;
+                
             }
         }
+
+        .router-link-active {
+            height: 100%;
+            border-bottom: 2px solid black;
+        }
+
+        .social {
+
+
+            a {
+                font-size: 2rem;
+                text-decoration: none;
+                color: black;
+                padding: 0 0.5rem;
+            }
+        }
+    }
+
+    .bg_active {
+        border-bottom: 1px solid black;
     }
 }
 </style>

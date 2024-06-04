@@ -40,7 +40,7 @@ export default {
     mounted() {
         this.callApi(this.url);
 
-        console.log(this.projects);
+       ;
     }
 }
 </script>
@@ -87,6 +87,25 @@ export default {
 </template>
 
 <style>
+.paginations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 
+    button {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border: none;
+        background-color: transparent;
+        font-size: 20px;
+        margin: 1rem 0;
 
+        &:hover {
+            background-color: whitesmoke;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+        }
+    }
+}
 </style>

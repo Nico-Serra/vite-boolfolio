@@ -35,18 +35,36 @@ export default {
     <main>
 
         <template v-if="project">
-            <div class="container_sm text-center">
+            <div class="container text-center">
                 <h1 class="py_3">{{ project.name }}</h1>
 
-                <template v-if="project.cover_image.startsWith('uploads')">
-                    <img :src="base_api_url + '/storage/' + project.cover_image" alt="">
-                </template>
-                <template v-else>
-                    <img :src="project.cover_image" alt="">
-                </template>
+                <div class="projectInfo">
+                    <div class="img_project">
+                        <template v-if="project.cover_image.startsWith('uploads')">
+                            <img :src="base_api_url + '/storage/' + project.cover_image" alt="">
+                        </template>
+                        <template v-else>
+                            <img :src="project.cover_image" alt="">
+                        </template>
+                    </div>
 
-                <div class="badges" v-if="project.technologies">
-                    <span v-for="tech in project.technologies" class="text-center">{{ tech.name }}</span>
+                    <div class="meta_date">
+                        <div class="badges" v-if="project.technologies">
+                            <strong>Technologies:</strong>
+                            <span v-for="tech in project.technologies" class="text-center">{{ tech.name }}</span>
+                        </div>
+
+                        <div class="badges" v-if="project.type_id">
+                            <strong>Type:</strong>
+                            <span>{{ project.type.name }}</span>
+                        </div>
+
+                        <div class="date" v-if="project.project_date">
+                            <strong>Date:</strong>
+
+                            <span> {{ project.project_date }}</span>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -71,7 +89,6 @@ export default {
 <style>
 img {
     max-width: 100%;
-    height: 16/9;
 }
 
 .badges {
@@ -84,6 +101,19 @@ img {
         background-color: gray;
         padding: .0.4rem;
         border-radius: 0.25rem;
+    }
+}
+
+.projectInfo {
+    display: flex;
+    align-items: center;
+
+    .img_project {
+        width: 50%;
+    }
+
+    .meta_date {
+        width: 50%;
     }
 }
 </style>

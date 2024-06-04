@@ -39,7 +39,7 @@ export default {
 <style>
 .banner {
     color: whitesmoke;
-    padding: 5rem 0;
+    padding: 2rem 0;
 
     h1 {
         font-size: 50px;
@@ -53,7 +53,7 @@ export default {
         a {
             text-decoration: none;
             color: white;
-            background-color: gray;
+            background-color: transparent;
             border-radius: 0.25rem;
             padding: 0.75rem;
 
