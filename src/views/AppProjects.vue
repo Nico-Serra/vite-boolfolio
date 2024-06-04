@@ -47,11 +47,9 @@ export default {
 
 <template>
     <main>
-        <AppBanner titleBanner="This is the section where there are all my projects"
-            textContent="If you want to know me click ➡" routeName="about" textButton="About Me" />
         <template v-if="!loading">
 
-            <div class="container">
+            <div class="container ">
                 <h1 class="text-center">All Projects</h1>
                 <div class="row">
 
@@ -88,4 +86,7 @@ export default {
     </main>
 </template>
 
-<style></style>
+<style>
+
+
+</style>

@@ -36,4 +36,32 @@ export default {
 
 </template>
 
-<style></style>
+<style>
+.banner {
+    color: whitesmoke;
+    padding: 5rem 0;
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .banner_flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: gray;
+            border-radius: 0.25rem;
+            padding: 0.75rem;
+
+            &:hover {
+                cursor: pointer;
+                background-color: black;
+            }
+        }
+    }
+}
+</style>

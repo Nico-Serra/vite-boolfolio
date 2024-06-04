@@ -50,4 +50,28 @@ export default {
 
 </template>
 
-<style></style>
+<style>
+header {
+
+    nav {
+        height: 10vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            font-size: large;
+        }
+
+        .right_menu {
+
+
+            a {
+                text-decoration: none;
+                color: black;
+                padding: 0 1rem;
+            }
+        }
+    }
+}
+</style>
