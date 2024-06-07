@@ -7,10 +7,10 @@ export default {
     name: 'AppProjects',
     data() {
         return {
-            'projects': [],
-            'base_api_url': 'http://127.0.0.1:8000',
-            'url': 'http://127.0.0.1:8000/api/projects',
-            'loading': true
+            projects: [],
+            base_api_url: 'http://127.0.0.1:8000',
+            url: 'http://127.0.0.1:8000/api/projects',
+            loading: true,
         }
     },
     methods: {

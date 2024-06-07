@@ -68,6 +68,7 @@ export default {
 
 <style>
 header {
+    background-color: #ECE5F0;
 
     nav {
         height: 10vh;
