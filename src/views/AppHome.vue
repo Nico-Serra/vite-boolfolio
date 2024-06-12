@@ -1,7 +1,6 @@
 <script>
 
 import axios from 'axios'
-import AppBanner from '../components/AppBanner.vue'
 import ProjectCard from '../components/ProjectCard.vue'
 
 
@@ -26,11 +25,10 @@ export default {
         }
     },
     components: {
-        AppBanner,
         ProjectCard
     },
     mounted() {
-        this.callApi('http://127.0.0.1:8000/api/latest')
+        // this.callApi('http://127.0.0.1:8000/api/latest')
     }
 }
 
@@ -39,12 +37,17 @@ export default {
 <template>
     <main>
 
-        <AppBanner titleBanner="Welcome on my Portfolio" textContent="Show all my Projects" routeName="projects"
-            textButton="Show all Projects" />
-
         <div class="container">
 
-            <div class="works">
+            <div class="d_flex">
+                <div class="text">
+                    <h1>Ciao questo è il mio portfolio qui puoi visionare tutti i miei progetti e scoprire chi sono</h1>
+                </div>
+                <div class="img_bg">
+                    <img src="/logoPortfolio.png" alt="">
+                </div>
+            </div>
+            <!-- <div class="works">
                 <hr>
                 <h2>
                     My last work
@@ -61,7 +64,7 @@ export default {
             </template>
 
 
-            <template v-else>
+<template v-else>
 
                 <div class="container">
                     <div class="text-center">
@@ -69,7 +72,7 @@ export default {
                     </div>
                 </div>
 
-            </template>
+            </template> -->
 
 
         </div>
@@ -78,7 +81,7 @@ export default {
     </main>
 </template>
 
-<style>
+<style scoped>
 .works {
     display: flex;
     justify-content: center;
@@ -89,10 +92,37 @@ export default {
         flex-grow: 1;
     }
 
-    h2 {
-        padding: 0 .5rem;
-        text-transform: uppercase;
-        color: white;
+}
+
+.container {
+    height: 100%;
+}
+
+.d_flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .text {
+        width: 50%;
+        text-align: center;
+        padding: 1rem;
+
+        h1 {
+            padding: 0 .5rem;
+            text-transform: uppercase;
+            color: black
+        }
     }
+
+
+    .img_bg {
+        width: 50%;
+        opacity: 0.5;
+        text-align: center;
+        object-fit: cover;
+    }
+
 }
 </style>

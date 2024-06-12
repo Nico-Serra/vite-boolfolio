@@ -1,7 +1,6 @@
 <script>
 import axios from 'axios'
 import ProjectCard from '../components/ProjectCard.vue'
-import AppBanner from '../components/AppBanner.vue'
 
 export default {
     name: 'AppProjects',
@@ -19,6 +18,8 @@ export default {
                 console.log(response.data.projects);
                 this.projects = response.data.projects
                 this.loading = false
+            }).catch(error => {
+                console.error(error);
             })
         },
         backPage(url) {
@@ -35,12 +36,9 @@ export default {
     },
     components: {
         ProjectCard,
-        AppBanner
     },
     mounted() {
         this.callApi(this.url);
-
-       ;
     }
 }
 </script>

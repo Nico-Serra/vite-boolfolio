@@ -1,5 +1,4 @@
 <script>
-import AppBanner from '../components/AppBanner.vue'
 
 export default {
     name: 'AppAbout',
@@ -9,7 +8,6 @@ export default {
         }
     },
     components: {
-        AppBanner
     },
     mounted() {
 
@@ -19,9 +17,6 @@ export default {
 
 <template>
     <main>
-
-        <AppBanner titleBanner="This is the section About" textContent="Contact me" routeName="contacts"
-            textButton="Contacts" />
 
         <div class="container_sm">
             <div class="text-center">

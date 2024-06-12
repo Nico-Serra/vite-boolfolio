@@ -45,7 +45,7 @@ export default {
         <div class="container">
             <nav>
                 <div class="logo">
-                    <h1>Portfolio</h1>
+                    <img src="/logo.png" alt="">
                 </div>
 
                 <div class="menu">
@@ -66,20 +66,20 @@ export default {
 
 </template>
 
-<style>
+<style scoped>
 header {
-    background-color: #ECE5F0;
 
     nav {
         height: 10vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        color: white;
 
 
         .logo {
-            font-size: large;
-            text-transform: uppercase;
+            max-width: 100%;
+            width: 100px;
         }
 
         .menu {
@@ -88,9 +88,9 @@ header {
             a {
                 text-decoration: none;
                 color: black;
-                padding: 0 1rem;
-                padding-bottom: 0.5rem;
-                
+                padding: 1rem;
+                height: 10vh;
+
             }
         }
 
@@ -111,8 +111,6 @@ header {
         }
     }
 
-    .bg_active {
-        border-bottom: 1px solid black;
-    }
+
 }
 </style>
