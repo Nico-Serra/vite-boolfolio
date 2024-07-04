@@ -27,9 +27,8 @@ export default {
 
 <style>
 footer {
-    color: whitesmoke;
-    padding: 0.25rem 0;
-    height: 5vh;
-
+    color: black;
+    height: 3vh;
+    line-height: 3vh;
 }
 </style>

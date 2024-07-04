@@ -70,11 +70,11 @@ export default {
 header {
 
     nav {
-        height: 10vh;
+        height: 7vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: white;
+        color: black;
 
 
         .logo {

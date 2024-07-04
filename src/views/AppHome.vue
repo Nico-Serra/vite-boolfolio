@@ -12,7 +12,8 @@ export default {
         return {
             projects: [],
             base_api_url: 'http://127.0.0.1:8000',
-            loading: true
+            loading: true,
+
         }
     },
     methods: {
@@ -38,13 +39,13 @@ export default {
     <main>
 
         <div class="container">
+            <div class="home">
+                <img src="/logoPortfolio.png" alt="">
 
-            <div class="d_flex">
-                <div class="text">
-                    <h1>Ciao questo è il mio portfolio qui puoi visionare tutti i miei progetti e scoprire chi sono</h1>
-                </div>
-                <div class="img_bg">
-                    <img src="/logoPortfolio.png" alt="">
+                <div class="actions">
+                    <router-link :to="{ name: 'projects' }">Projects</router-link>
+                    <router-link :to="{ name: 'about' }">About</router-link>
+                    <router-link :to="{ name: 'contacts' }">Contacts</router-link>
                 </div>
             </div>
             <!-- <div class="works">
@@ -75,6 +76,7 @@ export default {
             </template> -->
 
 
+
         </div>
 
 
@@ -96,33 +98,37 @@ export default {
 
 .container {
     height: 100%;
-}
-
-.d_flex {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
 
-    .text {
-        width: 50%;
-        text-align: center;
-        padding: 1rem;
+    img {
+        max-width: 100%;
+    }
 
-        h1 {
-            padding: 0 .5rem;
+    .actions {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            background-color: var(--portfolio-primary);
+            width: 120px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--portfolio-secondary);
+            text-decoration: none;
             text-transform: uppercase;
-            color: black
+            font-weight: 700;
+
+            &:hover {
+                transform: scale(1.2);
+                transition: 300ms ease-in-out;
+            }
         }
     }
-
-
-    .img_bg {
-        width: 50%;
-        opacity: 0.5;
-        text-align: center;
-        object-fit: cover;
-    }
-
 }
 </style>
