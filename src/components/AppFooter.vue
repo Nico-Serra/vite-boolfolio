@@ -27,7 +27,7 @@ export default {
 
 <style>
 footer {
-    color: black;
+    color: var(--portfolio-primary);
     height: 3vh;
     line-height: 3vh;
 }

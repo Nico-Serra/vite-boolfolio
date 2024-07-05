@@ -19,24 +19,24 @@ export default {
     <main>
 
         <div class="container_sm">
-            <div class="text-center">
+            <div class="about">
                 <h1>About</h1>
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste reiciendis dolorum cum voluptatibus
-                    explicabo accusamus, consequatur libero eaque sit. Dolorum, laborum quae. Explicabo qui unde eaque
-                    error
-                    similique magni quisquam earum adipisci eius? Officiis vel cumque aperiam in obcaecati eveniet.
-                    Similique incidunt veniam necessitatibus! Deserunt a ipsa accusantium aperiam optio architecto
-                    blanditiis, neque corrupti temporibus aliquam magni, dolore fugit repudiandae, aut fuga est debitis
-                    quisquam iure doloremque hic minus dignissimos ea recusandae quia. Dicta ex velit quas, a iste totam
-                    culpa nisi iusto voluptatem perspiciatis adipisci magnam vel nemo, omnis cum. Non exercitationem
-                    accusantium quod, quasi minus, possimus magni ipsa ex voluptatibus excepturi deleniti omnis nesciunt
-                    dignissimos sint consectetur fugit error dolores deserunt distinctio cum, earum sequi. Culpa a iure
-                    ducimus. Dolor magnam laboriosam temporibus labore, cumque eum maxime facere, odio nulla vero
-                    tenetur
-                    saepe veniam, accusantium voluptate nam exercitationem sequi beatae nobis? Incidunt sit vero
-                    voluptatem
-                    atque ea itaque!</p>
+                <p>
+                    Sono Nicola Serra un full-stack web developer e abito in un paesino in provincia di Taranto, Italia.
+                    <br><br>
+                    Ho appena concluso un corso intensivo di 700 ore con Boolean ma sono da sempre un appassionato di
+                    codice. <br><br>
+                    Prima di intramprendere questo percorso ero un operaio metalmeccanico. <br><br>
+                    La mia voglia di imparare mi permette di crescere professionalmente in maniera
+                    costante. <br><br>
+                    Quando non scrivo codice, mi piace molto praticare sport come calcio o padel, amo i film e le serie
+                    tv di genere fantasy. <br><br>
+                    Sono sempre alla ricerca di nuove sfide e opportunità per imparare e crescere. Se stai cercando un
+                    web-developer creativo e appassionato, <router-link
+                        :to="{ name: 'contacts' }">Contattatemi</router-link>
+
+                </p>
             </div>
         </div>
 
@@ -44,4 +44,36 @@ export default {
     </main>
 </template>
 
-<style></style>
+<style scoped>
+.about {
+    margin-top: 3rem;
+    background-color: whitesmoke;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+    text-align: center;
+    padding: 3rem;
+    color: var(--portfolio-secondary);
+
+    h1 {
+        padding: 1rem 0;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    a {
+        color: var(--portfolio-secondary);
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+            background-color: var(--portfolio-secondary);
+            color: var(--portfolio-primary);
+            transition: 300ms ease-in-out;
+            padding: 0.25rem;
+        }
+    }
+}
+</style>

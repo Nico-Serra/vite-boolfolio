@@ -39,7 +39,6 @@ main {
 .text-center {
     text-align: center;
     padding: 1rem 0;
-    color: whitesmoke;
 }
 
 .py_3 {
@@ -54,6 +53,10 @@ main {
     p {
         padding-bottom: 1rem;
     }
+}
+
+h1{
+    font-size: 42px;
 }
 
 .container {

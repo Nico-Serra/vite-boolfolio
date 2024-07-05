@@ -111,22 +111,27 @@ export default {
         justify-content: space-between;
 
         a {
-            background-color: var(--portfolio-primary);
-            width: 120px;
+            
+            background-color: var(--portfolio-secondary);
+                color: var(--portfolio-primary);
+            width: 100px;
             aspect-ratio: 1;
             border-radius: 50%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: var(--portfolio-secondary);
+            
             text-decoration: none;
             text-transform: uppercase;
             font-weight: 700;
 
+
             &:hover {
-                transform: scale(1.2);
+                transform: scale(1.25);
                 transition: 300ms ease-in-out;
+                background-color: var(--portfolio-primary);
+                color: var(--portfolio-secondary);
             }
         }
     }

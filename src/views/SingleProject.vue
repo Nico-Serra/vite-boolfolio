@@ -46,7 +46,11 @@ export default {
                         <template v-else>
                             <img :src="project.cover_image" alt="">
                         </template>
+                        <router-link :to="{ name: 'projects' }">
+                            <i class="fa-solid fa-circle-arrow-left"></i>
+                        </router-link>
                     </div>
+
 
                     <div class="meta_date">
                         <div class="badges" v-if="project.technologies">
@@ -59,8 +63,8 @@ export default {
                             <span>{{ project.type.name }}</span>
                         </div>
 
-                        <div class="date" v-if="project.project_date">
-                            <strong>Date:</strong>
+                        <div class="date py_3" v-if="project.project_date">
+                            <strong>Date: </strong>
 
                             <span> {{ project.project_date }}</span>
                         </div>
@@ -86,9 +90,36 @@ export default {
     </main>
 </template>
 
-<style>
+<style scoped>
 img {
     max-width: 100%;
+    border-radius: 20px;
+}
+
+h1 {
+    color: var(--portfolio-secondary);
+}
+
+a {
+    position: absolute;
+    color: var(--portfolio-secondary);
+    text-decoration: none;
+    left: -25px;
+    top: 100px;
+    background-color: var(--portfolio-primary);
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+
+    &:hover {
+        background-color: var(--portfolio-secondary);
+        color: var(--portfolio-primary);
+        transition: 300ms ease-in-out;
+    }
 }
 
 .badges {
@@ -98,22 +129,25 @@ img {
     padding-top: 1rem;
 
     >span {
-        background-color: gray;
+        background-color: var(--portfolio-primary);
         padding: .0.4rem;
         border-radius: 0.25rem;
+        color: var(--portfolio-secondary);
     }
 }
 
 .projectInfo {
-    display: flex;
-    align-items: center;
+    width: 80%;
+    margin: auto;
 
     .img_project {
-        width: 50%;
+        max-width: 100%;
+        position: relative;
+
     }
 
     .meta_date {
-        width: 50%;
+        color: white;
     }
 }
 </style>

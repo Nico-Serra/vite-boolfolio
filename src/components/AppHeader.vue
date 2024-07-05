@@ -74,12 +74,14 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: black;
+        color: var(--portfolio-secondary);
 
 
         .logo {
-            max-width: 100%;
-            width: 100px;
+            img {
+                max-width: 100%;
+                width: 100px;
+            }
         }
 
         .menu {
@@ -87,7 +89,7 @@ header {
 
             a {
                 text-decoration: none;
-                color: black;
+                color: var(--portfolio-secondary);
                 padding: 1rem;
                 height: 10vh;
 
@@ -96,7 +98,7 @@ header {
 
         .router-link-active {
             height: 100%;
-            border-bottom: 2px solid black;
+            border-bottom: 2px solid var(--portfolio-secondary);
         }
 
         .social {
@@ -105,7 +107,7 @@ header {
             a {
                 font-size: 2rem;
                 text-decoration: none;
-                color: black;
+                color: var(--portfolio-secondary);
                 padding: 0 0.5rem;
             }
         }

@@ -73,7 +73,7 @@ export default {
         <template v-else>
 
             <div class="container">
-                <div class="text-center">
+                <div class="text-center loading">
                     Loading...
                 </div>
             </div>
@@ -85,6 +85,15 @@ export default {
 </template>
 
 <style>
+h1 {
+    color: var(--portfolio-secondary);
+}
+
+.loading {
+    color: var(--portfolio-secondary);
+
+}
+
 .paginations {
     display: flex;
     justify-content: center;
@@ -92,16 +101,22 @@ export default {
     gap: 0.5rem;
 
     button {
-        padding: 0.5rem;
+        width: 50px;
+        color: var(--portfolio-primary);
+        aspect-ratio: 1;
         border-radius: 0.5rem;
         border: none;
         background-color: transparent;
         font-size: 20px;
         margin: 1rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
 
         &:hover {
-            background-color: whitesmoke;
-            color: rgb(0, 0, 0);
+            background-color: var(--portfolio-primary);
+            color: var(--portfolio-secondary);
             cursor: pointer;
         }
     }
